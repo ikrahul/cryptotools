@@ -1,0 +1,57 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #222;
+    padding: 1px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero h1 {
+    color: #f7931a;
+    font-size: 36px;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    padding: 10px;
+}
+
+.tools-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tools-table th {
+    background-color: #222;
+    color: #f7931a;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.tools-table td {
+    padding: 10px;
+    border: none;
+}
+
+.tools-table {
+    margin: 0 auto;
+}

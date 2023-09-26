@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoProject</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <section class="hero">
+                <h1>CryptoProject</h1>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div id="tools-container"></div>
+        </section>
+    </main>
+
+    <script>
+        // Data in JSON format for tools
+        const toolsData = [
+            {
+                column: "Category 1",
+                tools: ["Tool 1", "Tool 2", "Tool 3"],
+            },
+            {
+                column: "Category 2",
+                tools: ["Tool 4", "Tool 5", "Tool 6"],
+            },
+            {
+                column: "Category 3",
+                tools: ["Tool 7", "Tool 8", "Tool 9"],
+            },
+            {
+                column: "Category 4",
+                tools: ["Tool 7", "Tool 8", "Tool 9"],
+            },
+            {
+                column: "Category 5",
+                tools: ["Tool 7", "Tool 8", "Tool 9"],
+            },
+        ];
+
+        // Function to generate the table dynamically
+        function generateToolsTable() {
+            const toolsContainer = document.getElementById("tools-container");
+            const table = document.createElement("table");
+            table.classList.add("tools-table");
+
+            // Create table header
+            const thead = document.createElement("thead");
+            const headerRow = document.createElement("tr");
+            for (const column of toolsData) {
+                const th = document.createElement("th");
+                th.textContent = column.column;
+                headerRow.appendChild(th);
+            }
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create table body
+            const tbody = document.createElement("tbody");
+            for (let i = 0; i < 3; i++) {
+                const row = document.createElement("tr");
+                for (const column of toolsData) {
+                    const tool = document.createElement("td");
+                    if (i < column.tools.length) {
+                        const toolLink = document.createElement("a");
+                        toolLink.textContent = column.tools[i];
+                        toolLink.href = `tool${i + 1}.html`; // Set the tool page URL
+                        toolLink.style.color = "#fff";
+                        toolLink.style.textDecoration = "none";
+                        tool.appendChild(toolLink);
+                    }
+                    row.appendChild(tool);
+                }
+                tbody.appendChild(row);
+            }
+            table.appendChild(tbody);
+
+            toolsContainer.appendChild(table);
+        }
+
+        generateToolsTable();
+    </script>
+</body>
+</html>
