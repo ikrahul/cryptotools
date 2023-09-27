@@ -39,25 +39,32 @@ nav ul li a {
     padding: 10px;
 }
 
+/* Style the table */
 .tools-table {
     width: 100%;
     border-collapse: collapse;
 }
 
+/* Style the table header */
 .tools-table th {
     background-color: #222;
     color: #f7931a;
     padding: 20px;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
 }
 
+/* Style the table cells (text-align:left and padding-left added) */
 .tools-table td {
     padding: 10px;
     border: none;
-}
-
-.tools-table {
-    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+    word-wrap: break-word;
 }
 
 /* Style the footer */
@@ -65,11 +72,12 @@ footer {
     background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
+    padding-left: 0px;
     position: fixed;
     bottom: 10px;
-    left: 0;
-    width: 100%;
+    left: 25%;
+    width: 50%;
     z-index: 1; /* Adjust the z-index if needed */
 }
 
@@ -85,4 +93,47 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Style the table wrapper */
+.table-wrapper {
+    overflow: auto; /* Enable scrolling for the table */
+    max-height: 500px; /* Adjust the max height to your preference */
+}
+
+/* Style the scrollbar (for Webkit browsers like Chrome) */
+.table-wrapper::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track (the area behind the thumb) */
+.table-wrapper::-webkit-scrollbar-track {
+    background: #333; /* Set the background color of the track */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #f7941a5b; /* Set the color of the thumb */
+    border-radius: 6px; /* Round the corners of the thumb */
+}
+
+/* Hide the scrollbar buttons (arrows) */
+.table-wrapper::-webkit-scrollbar-button {
+    display: none;
+}
+/* Style the table */
+.tools-table {
+    width: 100%;
+    border:#f7931a;
+}
+
+/* Style the table header */
+.tools-table th {
+    background-color: #222;
+    color: #f7931a;
+    padding: 20px;
+    font-weight: bold;
+    position: sticky;
+    top: 0; /* Stick the header at the top of the table wrapper */
+    z-index: 2; /* Ensure it appears above the table cells */
 }
