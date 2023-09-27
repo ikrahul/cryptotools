@@ -27,6 +27,12 @@
         </section>
     </main>
 
+    <footer>
+        <p>
+            &copy; <a href="https://yourlink.com" target="_blank">CryptoProject</a> |
+            Made with ❤️ by Rahul Ban | <span id="current-year"></span>
+        </p>
+
     <script>
         // Data in JSON format for tools
         const toolsData = [
@@ -51,7 +57,10 @@
                 tools: ["Tool 7", "Tool 8", "Tool 9"],
             },
         ];
-
+        // Get the current year and update the "current-year" span
+        const currentYearElement = document.getElementById("current-year");
+        const currentYear = new Date().getFullYear();
+        currentYearElement.textContent = currentYear;
 // Function to generate the table dynamically
 function generateToolsTable() {
     const toolsContainer = document.getElementById("tools-container");
