@@ -1,7 +1,7 @@
 body {
     background-color: #333;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
@@ -24,6 +24,10 @@ nav ul li a {
     color: #fff;
 }
 
+.github-button{
+    text-align: center;
+    padding-bottom: 0px;
+}
 .hero h1 {
     color: #f7931a;
     font-size: 36px;
